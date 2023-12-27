@@ -16,6 +16,12 @@ public class DashboardPage extends TestBase {
     @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'$0')]")
     WebElement Value;
 
+    @FindBy(xpath = "//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Charities')]")
+    WebElement Charities;
+
+    @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'6')]")
+    WebElement Value1;
+
     public DashboardPage(){
         PageFactory.initElements(driver, this);
     }
@@ -34,5 +40,13 @@ public class DashboardPage extends TestBase {
 
     public boolean verifyRevenueValue(){
         return Value.isDisplayed();
+    }
+
+    public boolean verifyCharitiesLabel(){
+        return Charities.isDisplayed();
+    }
+
+    public boolean verifyCharitiesValue(){
+        return Value1.isDisplayed();
     }
 }
