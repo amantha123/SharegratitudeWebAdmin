@@ -4,6 +4,7 @@ import com.pack.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 public class DashboardPage extends TestBase {
 
@@ -33,6 +34,15 @@ public class DashboardPage extends TestBase {
 
     @FindBy(xpath = "(//h4[@class='mb-0'][contains(.,'12')])[1]")
     WebElement Value3;
+
+    @FindBy(xpath = "//button[@type='button'][contains(.,'Stats')]")
+    WebElement StatsBtn;
+
+    @FindBy(xpath = "(//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Users')])[2]")
+    WebElement Users1;
+
+    @FindBy(xpath = "(//h4[@class='mb-0'][contains(.,'12')])[2]")
+    WebElement Value4;
 
     public DashboardPage(){
         PageFactory.initElements(driver, this);
@@ -76,5 +86,17 @@ public class DashboardPage extends TestBase {
 
     public boolean verifyUsersValue(){
         return Value3.isDisplayed();
+    }
+
+    public boolean verifyStatsBtn(){
+        return StatsBtn.isDisplayed();
+    }
+
+    public boolean verifyUsersLabel1(){
+        return Users1.isDisplayed();
+    }
+
+    public boolean verifyUsersValue1(){
+        return Value4.isDisplayed();
     }
 }
