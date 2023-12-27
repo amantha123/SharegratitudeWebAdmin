@@ -93,6 +93,16 @@ public class DashboardPageTest extends TestBase {
         dashboardPage.verifyUsersValue1();
     }
 
+    @Test(priority = 14)
+    public void verifyTeamsLabelTest(){
+        dashboardPage.verifyTeamsLabel();
+    }
+
+    @Test(priority = 15)
+    public void verifyTeamsValueTest(){
+        dashboardPage.verifyTeamsValue();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();

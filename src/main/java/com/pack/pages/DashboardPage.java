@@ -44,6 +44,12 @@ public class DashboardPage extends TestBase {
     @FindBy(xpath = "(//h4[@class='mb-0'][contains(.,'12')])[2]")
     WebElement Value4;
 
+    @FindBy(xpath = "//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Teams')]")
+    WebElement Teams;
+
+    @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'57')]")
+    WebElement Value5;
+
     public DashboardPage(){
         PageFactory.initElements(driver, this);
     }
@@ -98,5 +104,13 @@ public class DashboardPage extends TestBase {
 
     public boolean verifyUsersValue1(){
         return Value4.isDisplayed();
+    }
+
+    public boolean verifyTeamsLabel(){
+        return Teams.isDisplayed();
+    }
+
+    public boolean verifyTeamsValue(){
+        return Value5.isDisplayed();
     }
 }
