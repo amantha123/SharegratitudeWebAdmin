@@ -28,6 +28,12 @@ public class DashboardPage extends TestBase {
     @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'10')]")
     WebElement Value2;
 
+    @FindBy(xpath = "(//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Users')])[1]")
+    WebElement Users;
+
+    @FindBy(xpath = "(//h4[@class='mb-0'][contains(.,'12')])[1]")
+    WebElement Value3;
+
     public DashboardPage(){
         PageFactory.initElements(driver, this);
     }
@@ -62,5 +68,13 @@ public class DashboardPage extends TestBase {
 
     public boolean verifyHospitalsValue(){
         return Value2.isDisplayed();
+    }
+
+    public boolean verifyUsersLabel(){
+        return Users.isDisplayed();
+    }
+
+    public boolean verifyUsersValue(){
+        return Value3.isDisplayed();
     }
 }
