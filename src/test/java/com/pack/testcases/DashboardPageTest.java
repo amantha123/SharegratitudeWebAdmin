@@ -58,6 +58,16 @@ public class DashboardPageTest extends TestBase {
         dashboardPage.verifyCharitiesValue();
     }
 
+    @Test(priority = 7)
+    public void verifyHospitalsLabelTest(){
+        dashboardPage.verifyHospitalsLabel();
+    }
+
+    @Test(priority = 8)
+    public void verifyHospitalsValueTest(){
+        dashboardPage.verifyHospitalsValue();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
