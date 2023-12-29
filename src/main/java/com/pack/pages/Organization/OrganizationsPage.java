@@ -13,6 +13,15 @@ public class OrganizationsPage extends TestBase {
     @FindBy(xpath = "//a[@href='/organization'][contains(.,'Organization List')]")
     WebElement Organization;
 
+    @FindBy(xpath = "//h4[contains(@class,'mb-0')]")
+    WebElement OrganizationListLabel;
+
+    @FindBy(xpath = "//input[contains(@id,'serch-organization')]")
+    WebElement SearchBox;
+
+    @FindBy(xpath = "//button[@class='cstm-btn'][contains(.,'Add Organization')]")
+    WebElement AddOrganizationBtn;
+
     public OrganizationsPage(){
         PageFactory.initElements(driver, this);
     }
@@ -25,5 +34,22 @@ public class OrganizationsPage extends TestBase {
         OrganizationDropdown.click();
         Organization.click();
         return new OrganizationsPage();
+    }
+
+    public boolean verifyOrganizationListLabel(){
+        return OrganizationListLabel.isDisplayed();
+    }
+
+    public boolean verifySearchBox(){
+        return SearchBox.isDisplayed();
+    }
+
+    public boolean verifyAddOrganizationBtn(){
+        return AddOrganizationBtn.isDisplayed();
+    }
+
+    public void verifySearchingOrganizations(){
+        SearchBox.click();
+        SearchBox.sendKeys("Royal");
     }
 }
