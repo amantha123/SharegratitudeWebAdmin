@@ -13,6 +13,9 @@ public class UnregisteredOrganizationsPage extends TestBase {
     @FindBy(xpath = "//a[@href='/unregistered-organization'][contains(.,'Unregistered Organizations')]")
     WebElement UnregisteredOrganizations;
 
+    @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'Unregistered Organization List')]")
+    WebElement UnregisteredOrganizationListLabel;
+
     public UnregisteredOrganizationsPage(){
         PageFactory.initElements(driver, this);
     }
@@ -25,5 +28,9 @@ public class UnregisteredOrganizationsPage extends TestBase {
         OrganizationDropdown.click();
         UnregisteredOrganizations.click();
         return new UnregisteredOrganizationsPage();
+    }
+
+    public boolean verifyUnregisteredOrganizationListLabel(){
+        return UnregisteredOrganizationListLabel.isDisplayed();
     }
 }

@@ -49,6 +49,32 @@ public class TeamsSuggestionPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyTeamListPage(){
+        teamsSuggestionPage.clickOnTeamsSuggestionLink();
+        teamsSuggestionPage.verifyTeamListLabel();
+        teamsSuggestionPage.verifySearchBox();
+        teamsSuggestionPage.verifyAddTeamBtn();
+    }
+
+    @Test(priority = 4)
+    public void verifySearchingTeamsTest(){
+        teamsSuggestionPage.clickOnTeamsSuggestionLink();
+        teamsSuggestionPage.verifySearchingTeams();
+    }
+
+    @Test(priority = 5)
+    public void verifyMandatoryFieldsTest(){
+        teamsSuggestionPage.clickOnTeamsSuggestionLink();
+        teamsSuggestionPage.verifyMandatoryFields();
+    }
+
+    @Test(priority = 6)
+    public void verifyAddingTeamSuggestionTest(){
+        teamsSuggestionPage.clickOnTeamsSuggestionLink();
+        teamsSuggestionPage.verifyAddingTeamSuggestion();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
