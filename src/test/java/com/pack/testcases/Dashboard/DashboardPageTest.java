@@ -1,8 +1,8 @@
-package com.pack.testcases;
+package com.pack.testcases.Dashboard;
 
 import com.pack.base.TestBase;
-import com.pack.pages.DashboardPage;
-import com.pack.pages.LoginPage;
+import com.pack.pages.Dashboard.DashboardPage;
+import com.pack.pages.Login.LoginPage;
 import com.pack.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -101,6 +101,46 @@ public class DashboardPageTest extends TestBase {
     @Test(priority = 15)
     public void verifyTeamsValueTest(){
         dashboardPage.verifyTeamsValue();
+    }
+
+    @Test(priority = 16)
+    public void verifyAppreciationsLabelTest(){
+        dashboardPage.verifyAppreciationsLabel();
+    }
+
+    @Test(priority = 17)
+    public void verifyAppreciationsValueTest(){
+        dashboardPage.verifyAppreciationsValue();
+    }
+
+    @Test(priority = 18)
+    public void verifyThankYouLabelTest(){
+        dashboardPage.verifyThankYouLabel();
+    }
+
+    @Test(priority = 19)
+    public void verifyThankYouValueTest(){
+        dashboardPage.verifyThankYouValue();
+    }
+
+    @Test(priority = 20)
+    public void verifyThankYouRepliesTest(){
+        dashboardPage.verifyThankYouReplies();
+    }
+
+    @Test(priority = 21)
+    public void verifyThankYouRepliesValueTest(){
+        dashboardPage.verifyThankYouRepliesValue();
+    }
+
+    @Test(priority = 22)
+    public void verifyThankYouRepliesValue1Test(){
+        dashboardPage.verifyThankYouRepliesValue1();
+    }
+
+    @Test(priority = 23)
+    public void verifyThankYouRepliesValue2Test(){
+        dashboardPage.verifyThankYouRepliesValue2();
     }
 
     @AfterMethod

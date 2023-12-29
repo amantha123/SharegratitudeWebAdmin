@@ -9,10 +9,44 @@
 
     <test name="Test Cases">
         <classes>
-            <class name="com.pack.testcases.LoginPageTest"></class>
-
-
-
+            <class name="com.pack.testcases.Login.LoginPageTest"></class>
+            <class name="com.pack.testcases.Dashboard.DashboardPageTest"></class>
+            <class name="com.pack.testcases.Users.UsersPageTest"></class>
+            <class name="com.pack.testcases.Users.PartialSignUpsPageTest"></class>
+            <class name="com.pack.testcases.Users.TeamJoinRequestsPageTest"></class>
+            <class name="com.pack.testcases.Users.PendingEmailVerificationsPageTest"></class>
+            <class name="com.pack.testcases.Organization.OrganizationPageTest"></class>
+            <class name="com.pack.testcases.Organization.UnregisteredOrganizationsPageTest"></class>
+            <class name="com.pack.testcases.Organization.TeamsSuggestionPageTest"></class>
+            <class name="com.pack.testcases.ThankYou.ThankYouPageTest"></class>
+            <class name="com.pack.testcases.Gift.GiftPageTest"></class>
+            <class name="com.pack.testcases.Moderation.CommunityModerationPageTest"></class>
+            <class name="com.pack.testcases.Moderation.NoContactThankYouPageTest"></class>
+            <class name="com.pack.testcases.Gifting.GiftingPageTest"></class>
+            <class name="com.pack.testcases.Gifting.GiftPartnerPageTest"></class>
+            <class name="com.pack.testcases.Gifting.OrdersPageTest"></class>
+            <class name="com.pack.testcases.NewsandStories.NewsStoriesPageTest"></class>
+            <class name="com.pack.testcases.Events.EventsPageTest"></class>
+            <class name="com.pack.testcases.Events.EventCategoriesPageTest"></class>
+            <class name="com.pack.testcases.Events.ArchivedEventPageTest"></class>
+            <class name="com.pack.testcases.Events.LocationGreetingsPageTest"></class>
+            <class name="com.pack.testcases.HelpCenter.HowToPageTest"></class>
+            <class name="com.pack.testcases.HelpCenter.QuickTipPageTest"></class>
+            <class name="com.pack.testcases.HelpCenter.FAQsPageTest"></class>
+            <class name="com.pack.testcases.HelpCenter.TermsofServicePageTest"></class>
+            <class name="com.pack.testcases.HelpCenter.AcceptableUsePolicyPageTest"></class>
+            <class name="com.pack.testcases.HelpCenter.PrivacyPolicyPageTest"></class>
+            <class name="com.pack.testcases.HelpCenter.PrivacySettingPageTest"></class>
+            <class name="com.pack.testcases.Charity.CharityPageTest"></class>
+            <class name="com.pack.testcases.Charity.CharityCategoriesPageTest"></class>
+            <class name="com.pack.testcases.Charity.ArchivedCharityPageTest"></class>
+            <class name="com.pack.testcases.Subscription.SubscriptionPageTest"></class>
+            <class name="com.pack.testcases.Creed.CreedPageTest"></class>
+            <class name="com.pack.testcases.AdminSetting.UserSettingPageTest"></class>
+            <class name="com.pack.testcases.AdminSetting.WelcomeEmailSettingsPageTest"></class>
+            <class name="com.pack.testcases.AppQRCode.AppQRCodePageTest"></class>
+            <class name="com.pack.testcases.Profile.ProfilePageTest"></class>
+            <class name="com.pack.testcases.AccountSetting.AccountSettingPageTest</class>
         </classes>
     </test>
 </suite>

@@ -1,10 +1,9 @@
-package com.pack.pages;
+package com.pack.pages.Dashboard;
 
 import com.pack.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
 
 public class DashboardPage extends TestBase {
 
@@ -49,6 +48,30 @@ public class DashboardPage extends TestBase {
 
     @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'57')]")
     WebElement Value5;
+
+    @FindBy(xpath = "//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Appreciations')]")
+    WebElement Appreciations;
+
+    @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'193')]")
+    WebElement Value6;
+
+    @FindBy(xpath = "(//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Thank You')])[1]")
+    WebElement ThankYou;
+
+    @FindBy(xpath = "//h4[@class='mb-0 mt-1'][contains(.,'177')]")
+    WebElement Value7;
+
+    @FindBy(xpath = "//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Thank You Replies')]")
+    WebElement ThankYouReplies;
+
+    @FindBy(xpath = "(//div[contains(.,'0.6%')])[11]")
+    WebElement Value8;
+
+    @FindBy(xpath = "(//div[contains(.,'Auto: 9')])[11]")
+    WebElement Value9;
+
+    @FindBy(xpath = "(//div[contains(.,'Total: 10')])[12]")
+    WebElement Value10;
 
     public DashboardPage(){
         PageFactory.initElements(driver, this);
@@ -112,5 +135,37 @@ public class DashboardPage extends TestBase {
 
     public boolean verifyTeamsValue(){
         return Value5.isDisplayed();
+    }
+
+    public boolean verifyAppreciationsLabel(){
+        return Appreciations.isDisplayed();
+    }
+
+    public boolean verifyAppreciationsValue(){
+        return Value6.isDisplayed();
+    }
+
+    public boolean verifyThankYouLabel(){
+        return ThankYou.isDisplayed();
+    }
+
+    public boolean verifyThankYouValue(){
+        return Value7.isDisplayed();
+    }
+
+    public boolean verifyThankYouReplies(){
+        return ThankYouReplies.isDisplayed();
+    }
+
+    public boolean verifyThankYouRepliesValue(){
+        return Value8.isDisplayed();
+    }
+
+    public boolean verifyThankYouRepliesValue1(){
+        return Value9.isDisplayed();
+    }
+
+    public boolean verifyThankYouRepliesValue2(){
+        return  Value10.isDisplayed();
     }
 }

@@ -1,6 +1,7 @@
-package com.pack.pages;
+package com.pack.pages.Login;
 
 import com.pack.base.TestBase;
+import com.pack.pages.Dashboard.DashboardPage;
 import org.apache.commons.logging.Log;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
