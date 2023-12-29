@@ -49,6 +49,19 @@ public class PartialSignUpsPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyPartiallyRegisteredUsersPageTest(){
+        partialSignUpsPage.clickOnPartialSignUpsLink();
+        partialSignUpsPage.verifyPartiallyRegisteredUsersLabel();
+        partialSignUpsPage.verifySearchBox();
+    }
+
+    @Test(priority = 4)
+    public void verifySearchingUsersTest(){
+        partialSignUpsPage.clickOnPartialSignUpsLink();
+        partialSignUpsPage.verifySearchingUsers();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();

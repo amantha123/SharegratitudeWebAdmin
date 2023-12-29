@@ -13,6 +13,9 @@ public class PendingEmailVerificationsPage extends TestBase {
     @FindBy(xpath = "//a[@href='/pending-email-verification-users'][contains(.,'Pending Email Verifications')]")
     WebElement PendingEmailVerifications;
 
+    @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'Pending Email Verifications')]")
+    WebElement PendingEmailVerificationsLabel;
+
     public PendingEmailVerificationsPage(){
         PageFactory.initElements(driver, this);
     }
@@ -25,5 +28,9 @@ public class PendingEmailVerificationsPage extends TestBase {
         UsersDropdown.click();
         PendingEmailVerifications.click();
         return new PendingEmailVerificationsPage();
+    }
+
+    public boolean verifyPendingEmailVerificationsLabel(){
+        return PendingEmailVerificationsLabel.isDisplayed();
     }
 }

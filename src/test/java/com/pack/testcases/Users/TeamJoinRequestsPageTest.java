@@ -49,6 +49,12 @@ public class TeamJoinRequestsPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyTeamJoiningRequestsPageTest(){
+        teamJoinRequestsPage.clickOnTeamJoinRequestsLink();
+        teamJoinRequestsPage.verifyTeamJoiningRequestsLabel();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
