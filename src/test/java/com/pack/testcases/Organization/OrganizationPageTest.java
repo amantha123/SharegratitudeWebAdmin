@@ -49,6 +49,20 @@ public class OrganizationPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyOrganizationListPageTest(){
+        organizationsPage.clickOnOrganizationLink();
+        organizationsPage.verifyOrganizationListLabel();
+        organizationsPage.verifySearchBox();
+        organizationsPage.verifyAddOrganizationBtn();
+    }
+
+    @Test(priority = 4)
+    public void verifySearchingOrganizationsTest(){
+        organizationsPage.clickOnOrganizationLink();
+        organizationsPage.verifySearchingOrganizations();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
