@@ -49,6 +49,12 @@ public class PendingEmailVerificationsPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyPendingEmailVerificationsPageTest(){
+        pendingEmailVerificationsPage.clickOnPendingEmailVerificationsLink();
+        pendingEmailVerificationsPage.verifyPendingEmailVerificationsLabel();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();

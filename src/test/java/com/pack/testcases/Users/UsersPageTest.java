@@ -49,6 +49,22 @@ public class UsersPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyUsersListPageTest(){
+        usersListPage.clickOnUsersLink();
+        usersListPage.verifyUserDetailsLabel();
+        usersListPage.verifySearchBox();
+        usersListPage.verifyAddUserBtn();
+        usersListPage.verifyDownloadIcon();
+        usersListPage.verifyFilterIcon();
+    }
+
+    @Test(priority = 4)
+    public void searchUsersListTest(){
+        usersListPage.clickOnUsersLink();
+        usersListPage.searchUsersPage();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();

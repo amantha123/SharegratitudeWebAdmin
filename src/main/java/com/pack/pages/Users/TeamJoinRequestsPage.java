@@ -13,6 +13,9 @@ public class TeamJoinRequestsPage extends TestBase {
     @FindBy(xpath = "//a[@href='/team-join-request'][contains(.,'Team Join Requests')]")
     WebElement TeamJoinRequests;
 
+    @FindBy(xpath = "//h4[contains(@class,'mb-0')]")
+    WebElement TeamJoiningRequestsLabel;
+
     public TeamJoinRequestsPage(){
         PageFactory.initElements(driver, this);
     }
@@ -25,5 +28,9 @@ public class TeamJoinRequestsPage extends TestBase {
         UsersDropdown.click();
         TeamJoinRequests.click();
         return new TeamJoinRequestsPage();
+    }
+
+    public boolean verifyTeamJoiningRequestsLabel(){
+        return TeamJoiningRequestsLabel.isDisplayed();
     }
 }

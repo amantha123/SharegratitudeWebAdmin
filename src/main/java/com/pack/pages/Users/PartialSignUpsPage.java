@@ -13,6 +13,12 @@ public class PartialSignUpsPage extends TestBase {
     @FindBy(xpath = "//a[@href='/partially-registered-users'][contains(.,'Partial Sign ups')]")
     WebElement PartialSignUps;
 
+    @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'Partially Registered Users')]")
+    WebElement PartiallyRegisteredUsers;
+
+    @FindBy(xpath = "//input[contains(@id,'search-user')]")
+    WebElement SearchBox;
+
     public PartialSignUpsPage(){
         PageFactory.initElements(driver, this);
     }
@@ -25,5 +31,18 @@ public class PartialSignUpsPage extends TestBase {
         UsersDropdown.click();
         PartialSignUps.click();
         return new PartialSignUpsPage();
+    }
+
+    public boolean verifyPartiallyRegisteredUsersLabel(){
+        return PartiallyRegisteredUsers.isDisplayed();
+    }
+
+    public boolean verifySearchBox(){
+        return SearchBox.isDisplayed();
+    }
+
+    public void verifySearchingUsers(){
+        SearchBox.click();
+        SearchBox.sendKeys("774848816");
     }
 }
