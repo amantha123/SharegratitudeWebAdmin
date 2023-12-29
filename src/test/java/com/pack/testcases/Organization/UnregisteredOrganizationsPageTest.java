@@ -49,6 +49,12 @@ public class UnregisteredOrganizationsPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyUnregisteredOrganizationListPageTest(){
+        unregisteredOrganizationsPage.clickOnUnregisteredOrganizationsLink();
+        unregisteredOrganizationsPage.verifyUnregisteredOrganizationListLabel();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
