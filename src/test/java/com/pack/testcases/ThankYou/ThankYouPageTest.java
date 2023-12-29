@@ -49,6 +49,20 @@ public class ThankYouPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyThankYouPageTest(){
+        thankYouPage.clickOnThankYouLink();
+        thankYouPage.verifySearchBox();
+        thankYouPage.verifyFilterIcon();
+        thankYouPage.verifyDownloadIcon();
+    }
+
+    @Test(priority = 4)
+    public void verifySearchingUsersTest(){
+        thankYouPage.clickOnThankYouLink();
+        thankYouPage.verifySearchingUsers();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
