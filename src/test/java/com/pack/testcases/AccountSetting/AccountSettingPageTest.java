@@ -4,7 +4,6 @@ import com.pack.base.TestBase;
 import com.pack.pages.AccountSetting.AccountSettingPage;
 import com.pack.pages.Dashboard.DashboardPage;
 import com.pack.pages.Login.LoginPage;
-import com.pack.pages.Profile.ProfilePage;
 import com.pack.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -33,7 +32,7 @@ public class AccountSettingPageTest extends TestBase {
 
     @Test(priority=1)
     public void verifyAccountSettingPageTitleTest(){
-        String accountSettingPageTitle = accountSettingPage.validateAccountSettingPageTitle()s;
+        String accountSettingPageTitle = accountSettingPage.validateAccountSettingPageTitle();
         Assert.assertEquals(accountSettingPageTitle, "Share Gratitude");
     }
 
