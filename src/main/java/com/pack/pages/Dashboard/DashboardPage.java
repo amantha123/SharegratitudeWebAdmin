@@ -31,7 +31,7 @@ public class DashboardPage extends TestBase {
     @FindBy(xpath = "(//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Users')])[1]")
     WebElement Users;
 
-    @FindBy(xpath = "(//h4[@class='mb-0'][contains(.,'12')])[1]")
+    @FindBy(xpath = "(//h4[@class='mb-0'][contains(.,'13')])[2]")
     WebElement Value3;
 
     @FindBy(xpath = "//button[@type='button'][contains(.,'Stats')]")
@@ -40,7 +40,7 @@ public class DashboardPage extends TestBase {
     @FindBy(xpath = "(//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Users')])[2]")
     WebElement Users1;
 
-    @FindBy(xpath = "(//h4[@class='mb-0'][contains(.,'12')])[2]")
+    @FindBy(xpath = "(//h4[@class='mb-0'][contains(.,'13')])[2]")
     WebElement Value4;
 
     @FindBy(xpath = "//p[@class='text-muted mb-0 cstm-tx14'][contains(.,'Teams')]")
