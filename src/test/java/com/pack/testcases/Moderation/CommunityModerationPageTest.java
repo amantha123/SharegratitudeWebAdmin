@@ -49,6 +49,13 @@ public class CommunityModerationPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyCommunityModerationListPageTest(){
+        communityModerationPage.clickOnCommunityModerationLink();
+        communityModerationPage.verifyCommunityModerationListLabel();
+        communityModerationPage.verifySearchBox();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();

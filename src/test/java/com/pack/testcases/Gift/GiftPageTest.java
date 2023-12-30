@@ -49,6 +49,20 @@ public class GiftPageTest extends TestBase {
         }
     }
 
+    @Test(priority = 3)
+    public void verifyGiftPageTest(){
+        giftPage.clickOnGiftLink();
+        giftPage.verifySearchBox();
+        giftPage.verifyFilterIcon();
+        giftPage.verifyDownloadIcon();
+    }
+
+    @Test(priority = 4)
+    public void verifySearchingUsersTest(){
+        giftPage.clickOnGiftLink();
+        giftPage.verifySearchingUsers();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();

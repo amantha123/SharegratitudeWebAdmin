@@ -13,6 +13,12 @@ public class CommunityModerationPage extends TestBase {
     @FindBy(xpath = "//a[@href='/community'][contains(.,'Community Moderation')]")
     WebElement CommunityModeration;
 
+    @FindBy(xpath = "//h4[@class='mb-0'][contains(.,'Community Moderation List')]")
+    WebElement CommunityModerationListLabel;
+
+    @FindBy(xpath = "//input[contains(@id,'serch-cahrity')]")
+    WebElement SearchBox;
+
     public CommunityModerationPage(){
         PageFactory.initElements(driver, this);
     }
@@ -24,5 +30,13 @@ public class CommunityModerationPage extends TestBase {
     public CommunityModerationPage clickOnCommunityModerationLink(){
         CommunityModeration.click();
         return new CommunityModerationPage();
+    }
+
+    public boolean verifyCommunityModerationListLabel(){
+        return CommunityModerationListLabel.isDisplayed();
+    }
+
+    public boolean verifySearchBox(){
+        return SearchBox.isDisplayed();
     }
 }
