@@ -10,6 +10,15 @@ public class GiftPage extends TestBase {
     @FindBy(xpath = "//a[@href='/gift-list'][contains(.,'Gift list')]")
     WebElement Gift;
 
+    @FindBy(xpath = "//input[contains(@type,'text')]")
+    WebElement SearchBox;
+
+    @FindBy(xpath = "//i[contains(@class,'fi fi-rr-settings-sliders')]")
+    WebElement FilterIcon;
+
+    @FindBy(xpath = "//i[contains(@class,'fi fi-rr-download')]")
+    WebElement DownloadIcon;
+
     public GiftPage(){
         PageFactory.initElements(driver, this);
     }
@@ -21,5 +30,22 @@ public class GiftPage extends TestBase {
     public GiftPage clickOnGiftLink(){
         Gift.click();
         return new GiftPage();
+    }
+
+    public boolean verifySearchBox(){
+        return SearchBox.isDisplayed();
+    }
+
+    public boolean verifyFilterIcon(){
+        return FilterIcon.isDisplayed();
+    }
+
+    public boolean verifyDownloadIcon(){
+        return DownloadIcon.isDisplayed();
+    }
+
+    public void verifySearchingUsers(){
+        SearchBox.click();
+        SearchBox.sendKeys("Kavinthan");
     }
 }

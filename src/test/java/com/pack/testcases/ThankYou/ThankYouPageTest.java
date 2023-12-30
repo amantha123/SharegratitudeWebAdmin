@@ -63,6 +63,17 @@ public class ThankYouPageTest extends TestBase {
         thankYouPage.verifySearchingUsers();
     }
 
+    @Test(priority = 5)
+    public void verifyFilteringThankYouPageTest(){
+        thankYouPage.clickOnThankYouLink();
+        thankYouPage.verifyFilteringThankYouPage();
+    }
+
+    @Test(priority = 6)
+    public void verifyDownloadingDataTest(){
+        thankYouPage.verifyDownloadingData();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
